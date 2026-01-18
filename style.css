@@ -1,0 +1,83 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Manrope", sans-serif;
+  background-color: hsl(218, 23%, 16%);
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 1.5rem;
+}
+
+.card {
+  background-color: hsl(217, 19%, 24%);
+  border-radius: 10px;
+  padding: 2.5rem 1.5rem 4.5rem;
+  text-align: center;
+  position: relative;
+  max-width: 540px;
+  width: 100%;
+}
+
+.advice-number {
+  color: hsl(150, 100%, 66%);
+  font-size: 0.8125rem;
+  letter-spacing: 0.25rem;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+}
+
+.advice-text {
+  color: hsl(193, 38%, 86%);
+  font-size: clamp(1.5rem, 4vw, 1.75rem);
+  font-weight: 800;
+  line-height: 1.4;
+  margin-bottom: 2rem;
+}
+
+.divider img {
+  width: 100%;
+  display: block;
+  margin: 0 auto 2rem;
+}
+
+.dice-btn {
+  background-color: hsl(150, 100%, 66%);
+  border: none;
+  border-radius: 50%;
+  width: 4rem;
+  height: 4rem;
+  position: absolute;
+  left: 50%;
+  bottom: -2rem;
+  transform: translateX(-50%);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.dice-btn:hover,
+.dice-btn:focus {
+  box-shadow: 0 0 2.5rem 0.5rem hsla(150, 100%, 66%, 0.5);
+  outline: none;
+}
+
+.dice-btn img {
+  width: 1.5rem;
+}
+
+/* Mobile adjustments */
+@media (max-width: 500px) {
+  .card {
+    padding: 2.5rem 1.25rem 4.5rem;
+  }
+
+  .advice-text {
+    font-size: 1.5rem;
+  }
+}
